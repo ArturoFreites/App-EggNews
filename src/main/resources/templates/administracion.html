@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Egg News</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link th:href="@{/styles/style.css}" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.ibb.co/Q8dB0ky/huevo.png"/>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="https://i.ibb.co/Syc3bq4/eggNews.png" alt="Eagg News" width="200">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administrar noticias</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-administracion">
+        <div class="div-administracion">
+            <a href="">  
+                <button type="button" class="btn btn-secondary">Crear Noticia</button>
+            </a>
+        </div>
+
+        <div th:if="${exito != null}" class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Exito!</h4>
+            <p th:text="${exito}"></p>
+        </div>
+
+        <h1>LISTADO DE NOTICIAS</h1>
+        
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                        <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Titulo Noticia</th>
+                        <th scope="col">Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>@mdo</td>
+                        <td>Modificar</td>
+                        <td>Eliminar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section class="footer-eggnews">
+        <img src="https://i.ibb.co/7CVNL6K/egg-News-blanco.png" alt="Eagg News" width="200">
+        <h3>Pagina diseñada por Arturo Freites <br> <a href="https://www.gylgroup.com/" target="_blank">Beca G&L Gruop</a> <br> <a href="https://eggeducacion.com/es-AR/" target="_blank">Egg Educacion</a></h3>
+    </section>
+
+
+</body>
+
+</html>
